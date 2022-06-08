@@ -1,0 +1,20 @@
+class Solution {
+    public ListNode middleNode(ListNode head) {
+        if(head==null)
+            return head;
+        ListNode curr=new ListNode(0);
+        int len=1;
+        curr=head;
+        ListNode pre=curr;
+        while(curr.next!=null){
+            len++;
+            curr=curr.next;
+        }
+        int mid=(len/2)+1;
+        while(mid>1){
+            pre=pre.next;
+            mid--;
+        }
+        return pre;
+    }
+}
