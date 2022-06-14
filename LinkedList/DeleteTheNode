@@ -1,0 +1,8 @@
+public class Solution {
+	public static void deleteNode(LinkedListNode<Integer> node) {
+		LinkedListNode<Integer> dummy=node.next;
+        node.data=dummy.data;
+        node.next=dummy.next;
+        dummy.next=null;
+	}
+}
